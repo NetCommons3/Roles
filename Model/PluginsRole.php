@@ -164,4 +164,38 @@ class PluginsRole extends RolesAppModel {
 
 		return $composer;
 	}
+
+/**
+ * Get plugin data from folder and roomId, langId
+ *
+ * @param int $folder plugins.folder
+ * @param int $roleId roles.id
+ * @param int $langId languages.id
+ * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
+ * @since   NetCommons 3.0.0.0
+ * @return  int blocks.id
+ */
+	public function getPluginByFolder($folder, $roleId, $langId) {
+		if (! $roleId || ! $langId) {
+			return false;
+		}
+
+		//ロールIDのセット
+		$roleId = (int)$roleId;
+
+		//plugins_languagesテーブルの取得
+		$langId = (int)$langId;
+		$this->belongsTo['LanguagesPlugin']['conditions']['LanguagesPlugin.language_id'] = $langId;
+
+		//pluginsテーブルの取得
+		$plugin = $this->find('first', array(
+			'conditions' => array(
+				'Plugin.folder' => $folder,
+				'Role.id' => $roleId
+			)
+		));
+
+		return $plugin;
+	}
+
 }

@@ -87,7 +87,7 @@ class PluginsRoleTest extends CakeTestCase {
 	}
 
 /**
- * testGetPluginDataError
+ * testGetPluginsError
  *
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
  * @return  void
@@ -99,6 +99,40 @@ class PluginsRoleTest extends CakeTestCase {
 		$langId = 0;
 		$type = PluginsRole::PLUGIN_TYPE_FOR_CONTROL_PANEL;
 		$plugins = $this->PluginsRole->getPlugins($type, $roleId, $langId);
+
+		$this->assertFalse($plugins);
+	}
+
+/**
+ * testGetPluginByFolder
+ *
+ * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
+ * @return  void
+ */
+	public function testGetPluginByFolder() {
+		$this->PluginsRole->composerJsonName = 'composer_test.json';
+
+		$roleId = 1;
+		$langId = 2;
+		$folder = 'roles';
+		$plugins = $this->PluginsRole->getPluginByFolder($folder, $roleId, $langId);
+
+		$this->assertTrue(is_array($plugins));
+	}
+
+/**
+ * testGetPluginByFolderError
+ *
+ * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
+ * @return  void
+ */
+	public function testGetPluginByFolderError() {
+		$this->PluginsRole->composerJsonName = 'composer_test.json';
+
+		$roleId = 0;
+		$langId = 0;
+		$folder = 'roles';
+		$plugins = $this->PluginsRole->getPluginByFolder($folder, $roleId, $langId);
 
 		$this->assertFalse($plugins);
 	}
