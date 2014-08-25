@@ -107,7 +107,7 @@ class PluginsRole extends RolesAppModel {
 /**
  * Get plugin data from type and roleId, $langId
  *
- * @param int $type 1:for frame/2:for controll panel
+ * @param mixed $type array|int 1:for frame/2:for controll panel
  * @param int $roleId roles.id
  * @param int $langId languages.id
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
