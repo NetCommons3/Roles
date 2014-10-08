@@ -11,7 +11,6 @@
  * @link        http://www.netcommons.org NetCommons Project
  * @license     http://www.netcommons.org/license.txt NetCommons License
  * @copyright   Copyright 2014, NetCommons Project
- * @package     app.Plugin.Roles.Model
  */
 
 App::uses('RolesAppModel', 'Roles.Model');
@@ -20,7 +19,7 @@ App::uses('RolesAppModel', 'Roles.Model');
  * PluginsRole Model
  *
  * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package     app.Plugin.Roles.Model
+ * @package     Roles\Model
  */
 class PluginsRole extends RolesAppModel {
 
@@ -47,35 +46,6 @@ class PluginsRole extends RolesAppModel {
 	public $composerJsonName = 'composer.json';
 
 /**
- * Validation rules
- *
- * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
- * @var     array
- */
-	public $validate = array(
-		'role_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'plugin_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-	);
-
-/**
  * belongsTo associations
  *
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
@@ -84,23 +54,17 @@ class PluginsRole extends RolesAppModel {
 	public $belongsTo = array(
 		'Role' => array(
 			'className' => 'Role',
-			'foreignKey' => 'role_id',
-			'conditions' => '',
+			'foreignKey' => false,
+			'conditions' => array('PluginsRole.role_key = Role.key'),
 			'fields' => '',
 			'order' => ''
 		),
 		'Plugin' => array(
 			'className' => 'Plugin',
-			'foreignKey' => 'plugin_id',
-			'conditions' => '',
+			'foreignKey' => false,
+			'conditions' => array('PluginsRole.plugin_key = Plugin.key'),
 			'fields' => '',
 			'order' => ''
-		),
-		'LanguagesPlugin' => array(
-			'className' => 'LanguagesPlugin',
-			//'foreignKey' => 'plugin_id',
-			'foreignKey' => false,
-			'conditions' => array('LanguagesPlugin.plugin_id=Plugin.id'),
 		),
 	);
 
@@ -108,28 +72,28 @@ class PluginsRole extends RolesAppModel {
  * Get plugin data from type and roleId, $langId
  *
  * @param mixed $type array|int 1:for frame/2:for controll panel
- * @param int $roleId roles.id
+ * @param int $roleKey roles.key
  * @param int $langId languages.id
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
  * @return  mixed array|bool
  */
-	public function getPlugins($type, $roleId, $langId) {
-		if (! $roleId || ! $langId) {
+	public function getPlugins($type, $roleKey, $langId) {
+		if (! $roleKey || ! $langId) {
 			return false;
 		}
 
 		//ロールIDのセット
-		$roleId = (int)$roleId;
+		//$roleId = (int)$roleId;
 
 		//plugins_languagesテーブルの取得
 		$langId = (int)$langId;
-		$this->belongsTo['LanguagesPlugin']['conditions']['LanguagesPlugin.language_id'] = $langId;
+		$this->belongsTo['Plugin']['conditions']['Plugin.language_id'] = $langId;
 
 		//pluginsテーブルの取得
 		$plugins = $this->find('all', array(
 			'conditions' => array(
 				'Plugin.type' => $type,
-				'Role.id' => $roleId
+				'Role.key' => $roleKey
 			),
 			'order' => $this->name . '.id',
 		));
@@ -148,8 +112,8 @@ class PluginsRole extends RolesAppModel {
 		//composerから情報を取得する
 		$composer = array();
 
-		$folder = Inflector::camelize($plugin['Plugin']['folder']);
-		$path = APP . 'Plugin' . DS . $folder . DS . $this->composerJsonName;
+		$key = Inflector::camelize($plugin['Plugin']['key']);
+		$path = APP . 'Plugin' . DS . $key . DS . $this->composerJsonName;
 
 		if (file_exists($path)) {
 			$file = new File($path);
@@ -168,14 +132,14 @@ class PluginsRole extends RolesAppModel {
 /**
  * Get plugin data from folder and roomId, langId
  *
- * @param int $folder plugins.folder
+ * @param int $key plugins.folder
  * @param int $roleId roles.id
  * @param int $langId languages.id
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
  * @since   NetCommons 3.0.0.0
  * @return  int blocks.id
  */
-	public function getPluginByFolder($folder, $roleId, $langId) {
+	public function getPluginByKey($key, $roleId, $langId) {
 		if (! $roleId || ! $langId) {
 			return false;
 		}
@@ -185,12 +149,12 @@ class PluginsRole extends RolesAppModel {
 
 		//plugins_languagesテーブルの取得
 		$langId = (int)$langId;
-		$this->belongsTo['LanguagesPlugin']['conditions']['LanguagesPlugin.language_id'] = $langId;
+		$this->belongsTo['Plugin']['conditions']['Plugin.language_id'] = $langId;
 
 		//pluginsテーブルの取得
 		$plugin = $this->find('first', array(
 			'conditions' => array(
-				'Plugin.folder' => $folder,
+				'Plugin.key' => $key,
 				'Role.id' => $roleId
 			)
 		));

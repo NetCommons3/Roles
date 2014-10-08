@@ -7,7 +7,6 @@
  * @link        http://www.netcommons.org NetCommons Project
  * @license     http://www.netcommons.org/license.txt NetCommons License
  * @copyright   Copyright 2014, NetCommons Project
- * @package     app.Plugin.Roles.Test.Model.Case
  */
 
 App::uses('PluginsRole', 'Roles.Model');
@@ -15,8 +14,8 @@ App::uses('PluginsRole', 'Roles.Model');
 /**
  * PluginsRole Test Case
  *
- * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package     app.Plugin.Roles.Test.Model.Case
+ * @author Shohei Nakajima <nakajimashouhei@gmail.com>
+ * @package Roles\Test\Model\Case
  */
 class PluginsRoleTest extends CakeTestCase {
 
@@ -28,7 +27,6 @@ class PluginsRoleTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'plugin.roles.language',
-		'plugin.roles.languages_plugin',
 		'plugin.roles.plugin',
 		'plugin.roles.plugins_role',
 		'plugin.roles.role',
@@ -75,10 +73,10 @@ class PluginsRoleTest extends CakeTestCase {
 	public function testGetPlugins() {
 		$this->PluginsRole->composerJsonName = 'composer_test.json';
 
-		$roleId = 1;
+		$roleKey = 'system_administrator';
 		$langId = 2;
 		$type = PluginsRole::PLUGIN_TYPE_FOR_CONTROL_PANEL;
-		$plugins = $this->PluginsRole->getPlugins($type, $roleId, $langId);
+		$plugins = $this->PluginsRole->getPlugins($type, $roleKey, $langId);
 
 		$this->assertTrue(is_array($plugins));
 
@@ -109,13 +107,13 @@ class PluginsRoleTest extends CakeTestCase {
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
  * @return  void
  */
-	public function testGetPluginByFolder() {
+	public function testGetPluginByKey() {
 		$this->PluginsRole->composerJsonName = 'composer_test.json';
 
 		$roleId = 1;
 		$langId = 2;
-		$folder = 'roles';
-		$plugins = $this->PluginsRole->getPluginByFolder($folder, $roleId, $langId);
+		$key = 'roles';
+		$plugins = $this->PluginsRole->getPluginByKey($key, $roleId, $langId);
 
 		$this->assertTrue(is_array($plugins));
 	}
@@ -126,13 +124,13 @@ class PluginsRoleTest extends CakeTestCase {
  * @author  Shohei Nakajima <nakajimashouhei@gmail.com>
  * @return  void
  */
-	public function testGetPluginByFolderError() {
+	public function testGetPluginByKeyError() {
 		$this->PluginsRole->composerJsonName = 'composer_test.json';
 
 		$roleId = 0;
 		$langId = 0;
-		$folder = 'roles';
-		$plugins = $this->PluginsRole->getPluginByFolder($folder, $roleId, $langId);
+		$key = 'roles';
+		$plugins = $this->PluginsRole->getPluginByKey($key, $roleId, $langId);
 
 		$this->assertFalse($plugins);
 	}

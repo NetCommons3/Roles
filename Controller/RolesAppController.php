@@ -7,7 +7,6 @@
  * @link        http://www.netcommons.org NetCommons Project
  * @license     http://www.netcommons.org/license.txt NetCommons License
  * @copyright   Copyright 2014, NetCommons Project
- * @package     app.Plugin.Roles.Controller
  */
 
 App::uses('AppController', 'Controller');
@@ -16,7 +15,7 @@ App::uses('AppController', 'Controller');
  * RolesApp Controller
  *
  * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package     app.Plugin.Roles.Controller
+ * @package     Roles\Controller
  */
 class RolesAppController extends AppController {
 

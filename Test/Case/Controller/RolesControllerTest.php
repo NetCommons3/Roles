@@ -7,7 +7,6 @@
  * @link        http://www.netcommons.org NetCommons Project
  * @license     http://www.netcommons.org/license.txt NetCommons License
  * @copyright   Copyright 2014, NetCommons Project
- * @package     app.Plugin.Roles.Test.Controller.Case
  */
 
 App::uses('RolesController', 'Roles.Controller');
@@ -16,7 +15,7 @@ App::uses('RolesController', 'Roles.Controller');
  * RolesController Test Case
  *
  * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package     app.Plugin.Roles.Test.Controller.Case
+ * @package     Roles\Test\Controller\Case
  */
 class RolesControllerTest extends ControllerTestCase {
 
@@ -29,7 +28,7 @@ class RolesControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.Session',
 		'app.SiteSetting',
-		'app.SiteSettingValue',
+		//'app.SiteSettingValue',
 	);
 
 /**
