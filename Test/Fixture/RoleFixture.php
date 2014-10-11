@@ -1,27 +1,21 @@
 <?php
 /**
- * RoomFixture
+ * RoleFixture
  *
- * @author      Noriko Arai <arai@nii.ac.jp>
- * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @link        http://www.netcommons.org NetCommons Project
- * @license     http://www.netcommons.org/license.txt NetCommons License
- * @copyright   Copyright 2014, NetCommons Project
+* @author   Jun Nishikawa <topaz2@m0n0m0n0.com>
+* @link     http://www.netcommons.org NetCommons Project
+* @license  http://www.netcommons.org/license.txt NetCommons License
  */
 
 /**
- * RoomFixture
- *
- * @author      Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package     Roles\Test\Fixture
+ * Summary for RoleFixture
  */
 class RoleFixture extends CakeTestFixture {
 
 /**
  * Fields
  *
- * @author   Shohei Nakajima <nakajimashouhei@gmail.com>
- * @var      array
+ * @var array
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
@@ -37,24 +31,27 @@ e.g.) Administrator, User Manager, Chief, User
 		'modified_user' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1),
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB'),
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
 
 /**
  * Records
  *
- * @author   Shohei Nakajima <nakajimashouhei@gmail.com>
- * @var      array
+ * @var array
  */
 	public $records = array(
 		array(
 			'id' => 1,
-			'language_id' => 2,
-			'key' => 'system_administrator',
+			'language_id' => 1,
+			'key' => 'Lorem ipsum dolor sit amet',
 			'type' => 1,
-			'name' => 'システム管理者',
+			'name' => 'Lorem ipsum dolor sit amet',
+			'created_user' => 1,
+			'created' => '2014-10-11 02:55:29',
+			'modified_user' => 1,
+			'modified' => '2014-10-11 02:55:29'
 		),
 	);
 
