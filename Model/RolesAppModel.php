@@ -15,7 +15,7 @@ App::uses('AppModel', 'Model');
  * RolesApp Model
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Model
+ * @package NetCommons\Roles\Model
  */
 class RolesAppModel extends AppModel {
 

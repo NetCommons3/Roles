@@ -13,7 +13,7 @@
  * LanguageFixture
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Fixture
+ * @package NetCommons\Roles\Test\Fixture
  */
 class LanguageFixture extends CakeTestFixture {
 

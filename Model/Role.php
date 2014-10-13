@@ -20,7 +20,7 @@ App::uses('RolesAppModel', 'Roles.Model');
  * Role Model
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Model
+ * @package NetCommons\Roles\Model
  */
 class Role extends RolesAppModel {
 

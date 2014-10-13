@@ -13,7 +13,7 @@
  * Roles All Test Case
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Case
+ * @package NetCommons\Roles\Test\Case
  * @codeCoverageIgnore
  */
 class AllRolesTest extends CakeTestSuite {

@@ -15,7 +15,7 @@ App::uses('PluginsRole', 'Roles.Model');
  * PluginsRole Test Case
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Case\Model
+ * @package NetCommons\Roles\Test\Case\Model
  */
 class PluginsRoleTest extends CakeTestCase {
 

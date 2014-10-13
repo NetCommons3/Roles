@@ -13,7 +13,7 @@
  * PluginFixture
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Fixture
+ * @package NetCommons\Roles\Test\Fixture
  */
 class PluginFixture extends CakeTestFixture {
 

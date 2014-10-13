@@ -15,7 +15,7 @@ App::uses('RolesController', 'Roles.Controller');
  * RolesController Test Case
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Case\Controller
+ * @package NetCommons\Roles\Test\Case\Controller
  */
 class RolesControllerTest extends ControllerTestCase {
 

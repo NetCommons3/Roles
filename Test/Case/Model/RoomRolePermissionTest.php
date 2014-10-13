@@ -15,7 +15,7 @@ App::uses('RoomRolePermission', 'Roles.Model');
  * RoomRolePermission Test Case
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Test\Case\Model
+ * @package NetCommons\Roles\Test\Case\Model
  */
 class RoomRolePermissionTest extends CakeTestCase {
 

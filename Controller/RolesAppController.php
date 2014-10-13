@@ -15,7 +15,7 @@ App::uses('AppController', 'Controller');
  * RolesApp Controller
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package Roles\Controller
+ * @package NetCommons\Roles\Controller
  */
 class RolesAppController extends AppController {
 
