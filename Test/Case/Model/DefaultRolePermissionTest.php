@@ -1,6 +1,6 @@
 <?php
 /**
- * RoomRolePermission Test Case
+ * DefaultRolePermission Test Case
  *
  * @author Noriko Arai <arai@nii.ac.jp>
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
@@ -9,15 +9,15 @@
  * @copyright Copyright 2014, NetCommons Project
  */
 
-App::uses('RoomRolePermission', 'Roles.Model');
+App::uses('DefaultRolePermission', 'Roles.Model');
 
 /**
- * RoomRolePermission Test Case
+ * DefaultRolePermission Test Case
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
  * @package NetCommons\Roles\Test\Case\Model
  */
-class RoomRolePermissionTest extends CakeTestCase {
+class DefaultRolePermissionTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -25,8 +25,7 @@ class RoomRolePermissionTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'plugin.roles.room_role_permission',
-		'plugin.roles.roles_room'
+		'plugin.roles.default_role_permission'
 	);
 
 /**
@@ -36,7 +35,7 @@ class RoomRolePermissionTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->RoomRolePermission = ClassRegistry::init('Roles.RoomRolePermission');
+		$this->DefaultRolePermission = ClassRegistry::init('Roles.DefaultRolePermission');
 	}
 
 /**
@@ -45,15 +44,15 @@ class RoomRolePermissionTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->RoomRolePermission);
+		unset($this->DefaultRolePermission);
 
 		parent::tearDown();
 	}
 
 /**
- * testIndex
+ * testGetPluginByFolderError
  *
- * @return  void
+ * @return void
  */
 	public function testIndex() {
 		$this->assertTrue(true);
