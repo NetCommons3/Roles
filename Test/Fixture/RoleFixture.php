@@ -50,7 +50,7 @@ e.g.) Administrator, User Manager, Chief, User
 		array(
 			'id' => 1,
 			'language_id' => 1,
-			'key' => 'Lorem ipsum dolor sit amet',
+			'key' => 'system_administrator',
 			'type' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'created_user' => 1,

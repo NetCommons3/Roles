@@ -61,8 +61,13 @@ class PluginsRoleTest extends CakeTestCase {
 		$langId = 2;
 		$type = PluginsRole::PLUGIN_TYPE_FOR_CONTROL_PANEL;
 		$plugins = $this->PluginsRole->getPlugins($type, $roleKey, $langId);
+		$this->assertCount(1, $plugins);
 
-		$this->assertTrue(is_array($plugins));
+		$expected = array(
+			'PluginsRole', 'Role', 'Plugin'
+		);
+		$result = array_keys($plugins[0]);
+		$this->assertEquals($expected, $result);
 	}
 
 /**
@@ -90,7 +95,11 @@ class PluginsRoleTest extends CakeTestCase {
 		$key = 'roles';
 		$plugins = $this->PluginsRole->getPluginByKey($key, $roleId, $langId);
 
-		$this->assertTrue(is_array($plugins));
+		$expected = array(
+			'PluginsRole', 'Role', 'Plugin'
+		);
+		$result = array_keys($plugins);
+		$this->assertEquals($expected, $result);
 	}
 
 /**
