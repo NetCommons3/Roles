@@ -99,7 +99,7 @@ class Role extends RolesAppModel {
 			'finderQuery' => '',
 		),
 		'Room' => array(
-			'className' => 'Room',
+			'className' => 'Rooms.Room',
 			'joinTable' => 'roles_rooms',
 			'foreignKey' => 'role_id',
 			'associationForeignKey' => 'room_id',
