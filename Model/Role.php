@@ -25,6 +25,16 @@ App::uses('RolesAppModel', 'Roles.Model');
 class Role extends RolesAppModel {
 
 /**
+ * Role keys
+ *
+ * @var const
+ */
+	const
+		ROLE_KEY_SYSTEM_ADMINISTRATOR = 'system_administrator',
+		ROLE_KEY_EDITOR = 'editor',
+		ROLE_KEY_VISITOR = 'visitor';
+
+/**
  * Validation rules
  *
  * @var array

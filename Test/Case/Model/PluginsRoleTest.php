@@ -64,7 +64,7 @@ class PluginsRoleTest extends CakeTestCase {
 		$this->assertCount(1, $plugins);
 
 		$expected = array(
-			'PluginsRole', 'Role', 'Plugin'
+			'PluginsRole', 'Role', 'Plugin', 'TrackableCreator', 'TrackableUpdater'
 		);
 		$result = array_keys($plugins[0]);
 		$this->assertEquals($expected, $result);
@@ -96,7 +96,7 @@ class PluginsRoleTest extends CakeTestCase {
 		$plugins = $this->PluginsRole->getPluginByKey($key, $roleId, $langId);
 
 		$expected = array(
-			'PluginsRole', 'Role', 'Plugin'
+			'PluginsRole', 'Role', 'Plugin', 'TrackableCreator', 'TrackableUpdater'
 		);
 		$result = array_keys($plugins);
 		$this->assertEquals($expected, $result);
