@@ -95,23 +95,23 @@ class RolesControllerTest extends ControllerTestCase {
 /**
  * Login as given roles
  *
+ * @param CakeTestCase $test CakeTestCase instance
+ * @param string $role role key
  * @return void
  */
-	public function login($role = Role::ROLE_KEY_SYSTEM_ADMINISTRATOR) {
-		$this->controller->Auth
-			->staticExpects($this->any())
+	public static function login(CakeTestCase $test, $role = Role::ROLE_KEY_SYSTEM_ADMINISTRATOR) {
+		$test->controller->Auth
+			->staticExpects($test->any())
 			->method('user')
-			->will($this->returnCallback(function () use ($role) {
+			->will($test->returnCallback(function () use ($role) {
 				CakeSession::write('Auth.User', self::$roles[$role]);
 				return self::$roles[$role];
 			}));
 
-		$this->controller->Auth->login([
-				'username' => self::$roles[$role]['username'],
-				'password' => self::$roles[$role]['password'],
-			]
-		);
-		$this->assertTrue($this->controller->Auth->loggedIn());
+		$test->controller->Auth->login([
+			'username' => self::$roles[$role]['username'],
+			'password' => self::$roles[$role]['password'],
+		]);
 	}
 
 /**
