@@ -66,10 +66,6 @@ class RolesControllerTest extends ControllerTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		/* $this->Role = ClassRegistry::init('Roles.Role'); */
-		/* $this->loadModels([ */
-		/* 	'Role' => 'Roles.Role' */
-		/* ]); */
 	}
 
 /**
@@ -113,16 +109,4 @@ class RolesControllerTest extends ControllerTestCase {
 			'password' => self::$roles[$role]['password'],
 		]);
 	}
-
-/**
- * Expect user can authenticated as default roles
- *
- * @return void
- */
-	/* public function testLogin() { */
-	/* 	$roles = ['system_administrator', 'editor', 'visitor']; */
-	/* 	foreach ($roles as $role) { */
-	/* 		$this->login($role); */
-	/* 	} */
-	/* } */
 }
