@@ -96,7 +96,7 @@ class RolesControllerTest extends ControllerTestCase {
  * @return void
  */
 	public static function login(CakeTestCase $test, $role = Role::ROLE_KEY_SYSTEM_ADMINISTRATOR) {
-		$test->controller->Auth
+		$test->controller->Components->Auth
 			->staticExpects($test->any())
 			->method('user')
 			->will($test->returnCallback(function () use ($role) {
@@ -104,7 +104,7 @@ class RolesControllerTest extends ControllerTestCase {
 				return self::$roles[$role];
 			}));
 
-		$test->controller->Auth->login([
+		$test->controller->Components->Auth->login([
 			'username' => self::$roles[$role]['username'],
 			'password' => self::$roles[$role]['password'],
 		]);
