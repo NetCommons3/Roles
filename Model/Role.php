@@ -25,6 +25,14 @@ App::uses('RolesAppModel', 'Roles.Model');
 class Role extends RolesAppModel {
 
 /**
+ * Role types
+ */
+	const
+		ROLE_TYPE_USER = '1',
+		ROLE_TYPE_ROOM = '2',
+		ROLE_TYPE_GROUP = '3';
+
+/**
  * Role keys
  *
  * @var const
