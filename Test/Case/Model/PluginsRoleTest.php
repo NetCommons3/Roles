@@ -29,6 +29,7 @@ class PluginsRoleTest extends CakeTestCase {
 		'plugin.roles.plugin',
 		'plugin.roles.plugins_role',
 		'plugin.roles.role',
+		'plugin.users.user',
 	);
 
 /**
