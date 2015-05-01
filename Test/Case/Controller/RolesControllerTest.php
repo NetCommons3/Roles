@@ -45,11 +45,23 @@ class RolesControllerTest extends ControllerTestCase {
 			'password' => 'admin',
 			'role_key' => 'system_administrator',
 		],
+		'chief_editor' => [
+			'id' => 2,
+			'username' => 'chief_editor',
+			'password' => 'chief_editor',
+			'role_key' => 'chief_editor',
+		],
 		'editor' => [
 			'id' => 3,
 			'username' => 'editor',
 			'password' => 'editor',
 			'role_key' => 'editor',
+		],
+		'general_user' => [
+			'id' => 4,
+			'username' => 'general_user',
+			'password' => 'general_user',
+			'role_key' => 'general_user',
 		],
 		'visitor' => [
 			'id' => 5,
@@ -99,9 +111,13 @@ class RolesControllerTest extends ControllerTestCase {
 		$test->controller->Components->Auth
 			->staticExpects($test->any())
 			->method('user')
-			->will($test->returnCallback(function () use ($role) {
+			->will($test->returnCallback(function ($key = null) use ($role) {
 				CakeSession::write('Auth.User', self::$roles[$role]);
-				return self::$roles[$role];
+				if (isset(self::$roles[$role][$key])) {
+					return self::$roles[$role][$key];
+				} else {
+					return self::$roles[$role];
+				}
 			}));
 
 		$test->controller->Components->Auth->login([
