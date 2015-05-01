@@ -85,7 +85,7 @@ e.g.) Administrator, User Manager, Chief, User
 			'language_id' => 2,
 			'key' => 'editor',
 			'type' => 2,
-			'name' => '編集者',
+			'name' => 'editor name',
 			'created_user' => 1,
 			'created' => false,
 			'modified_user' => 1,
