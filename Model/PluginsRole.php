@@ -47,7 +47,7 @@ class PluginsRole extends RolesAppModel {
 			'order' => ''
 		),
 		'Plugin' => array(
-			'className' => 'Plugin',
+			'className' => 'PluginManager.Plugin',
 			'foreignKey' => false,
 			'conditions' => array('PluginsRole.plugin_key = Plugin.key'),
 			'fields' => '',
