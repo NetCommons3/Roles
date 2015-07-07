@@ -77,6 +77,440 @@ e.g.) Administrator, User Manager, Chief, User
 	);
 
 /**
+ * Records keyed by model name.
+ *
+ * @var array $records
+ */
+	public $records = array(
+		'DefaultRolePermission' => array(
+			//ルーム管理者
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'page_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'block_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_readable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_creatable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_publishable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_comment_creatable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_comment_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'content_comment_publishable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'room_administrator',
+				'type' => 'room_role',
+				'permission' => 'block_permission_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			//編集長
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'page_editable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'block_editable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_readable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_creatable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_publishable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_creatable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_publishable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'chief_editor',
+				'type' => 'room_role',
+				'permission' => 'block_permission_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			//編集者
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'page_editable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'block_editable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_readable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_creatable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_editable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_publishable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_creatable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_editable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_publishable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'editor',
+				'type' => 'room_role',
+				'permission' => 'block_permission_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			//一般
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'page_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'block_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_readable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_creatable',
+				'value' => 1,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_publishable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_comment_creatable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_comment_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'content_comment_publishable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'general_user',
+				'type' => 'room_role',
+				'permission' => 'block_permission_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			//参観者
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'page_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'block_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_readable',
+				'value' => 1,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_creatable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_publishable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_creatable',
+				'value' => 0,
+				'fixed' => 0,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'content_comment_publishable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+			array(
+				'role_key' => 'visitor',
+				'type' => 'room_role',
+				'permission' => 'block_permission_editable',
+				'value' => 0,
+				'fixed' => 1,
+			),
+		),
+
+		'Role' => array(
+			array(
+				'id' => 1,
+				'language_id' => 2,
+				'key' => 'system_administrator',
+				'type' => 1,
+				'name' => 'システム管理者',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			),
+			array(
+				'id' => 2,
+				'language_id' => 2,
+				'key' => 'room_administrator',
+				'type' => 2,
+				'name' => 'ルーム管理者',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			),
+			array(
+				'id' => 3,
+				'language_id' => 2,
+				'key' => 'chief_editor',
+				'type' => 2,
+				'name' => '編集長',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			),
+			array(
+				'id' => 4,
+				'language_id' => 2,
+				'key' => 'editor',
+				'type' => 2,
+				'name' => '編集者',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			),
+			array(
+				'id' => 5,
+				'language_id' => 2,
+				'key' => 'general_user',
+				'type' => 2,
+				'name' => '一般',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			),
+			array(
+				'id' => 6,
+				'language_id' => 2,
+				'key' => 'visitor',
+				'type' => 2,
+				'name' => '参観者',
+				'created_user' => 1,
+				'created' => false,
+				'modified_user' => 1,
+				'modified' => false,
+			)
+		),
+	);
+
+/**
  * Before migration callback
  *
  * @param string $direction Direction of migration process (up or down)
@@ -93,6 +527,36 @@ e.g.) Administrator, User Manager, Chief, User
  * @return bool Should process continue
  */
 	public function after($direction) {
+		if ($direction === 'down') {
+			return true;
+		}
+
+		foreach ($this->records as $model => $records) {
+			if (!$this->updateRecords($model, $records)) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+/**
+ * Update model records
+ *
+ * @param string $model model name to update
+ * @param string $records records to be stored
+ * @param string $scope ?
+ * @return bool Should process continue
+ */
+	public function updateRecords($model, $records, $scope = null) {
+		$Model = $this->generateModel($model);
+		foreach ($records as $record) {
+			$Model->create();
+			if (!$Model->save($record, false)) {
+				return false;
+			}
+		}
+
 		return true;
 	}
 }
