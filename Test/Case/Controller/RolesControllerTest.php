@@ -26,7 +26,6 @@ class RolesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.Session',
 		'plugin.net_commons.site_setting',
 		'plugin.pages.page',
 		'plugin.roles.role',
