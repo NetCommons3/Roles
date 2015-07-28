@@ -48,30 +48,35 @@ class RoleRecords extends NetCommonsMigration {
 				'key' => 'system_administrator',
 				'type' => 1,
 				'name' => 'システム管理者',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'user_administrator',
 				'type' => 1,
 				'name' => '会員管理者',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'chief_user',
 				'type' => 1,
 				'name' => '主任',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'general_user',
 				'type' => 1,
 				'name' => '一般',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'guest_user',
 				'type' => 1,
 				'name' => 'ゲスト',
+				'is_systemized' => 1,
 			),
 
 			//ルーム内の役割
@@ -80,30 +85,35 @@ class RoleRecords extends NetCommonsMigration {
 				'key' => 'room_administrator',
 				'type' => 2,
 				'name' => 'ルーム管理者',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'chief_editor',
 				'type' => 2,
 				'name' => '編集長',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'editor',
 				'type' => 2,
 				'name' => '編集者',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'general_user',
 				'type' => 2,
 				'name' => '一般',
+				'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2,
 				'key' => 'visitor',
 				'type' => 2,
 				'name' => '参観者',
+				'is_systemized' => 1,
 			)
 		),
 	);
