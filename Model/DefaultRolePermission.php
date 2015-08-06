@@ -20,6 +20,13 @@ App::uses('RolesAppModel', 'Roles.Model');
 class DefaultRolePermission extends RolesAppModel {
 
 /**
+ * Type
+ *
+ * @var const
+ */
+	const TYPE_ROOM_ROLE = 'room_role';
+
+/**
  * Validation rules
  *
  * @var array
