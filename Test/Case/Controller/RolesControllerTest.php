@@ -11,6 +11,7 @@
 
 App::uses('RolesController', 'Roles.Controller');
 App::uses('Role', 'Roles.Model');
+App::uses('YAControllerTestCase', 'NetCommons.TestSuite');
 
 /**
  * RolesController Test Case
@@ -18,7 +19,7 @@ App::uses('Role', 'Roles.Model');
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
  * @package NetCommons\Roles\Test\Case\Controller
  */
-class RolesControllerTest extends ControllerTestCase {
+class RolesControllerTest extends YAControllerTestCase {
 
 /**
  * Fixtures
