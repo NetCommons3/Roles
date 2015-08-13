@@ -27,10 +27,7 @@ class RolesControllerTest extends YAControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		//'plugin.net_commons.site_setting',
-		//'plugin.pages.page',
 		'plugin.roles.role',
-		//'plugin.users.user',
 	);
 
 /**
