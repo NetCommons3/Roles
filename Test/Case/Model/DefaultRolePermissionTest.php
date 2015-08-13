@@ -10,6 +10,7 @@
  */
 
 App::uses('DefaultRolePermission', 'Roles.Model');
+App::uses('YACakeTestCase', 'NetCommons.TestSuite');
 
 /**
  * DefaultRolePermission Test Case
@@ -17,7 +18,7 @@ App::uses('DefaultRolePermission', 'Roles.Model');
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
  * @package NetCommons\Roles\Test\Case\Model
  */
-class DefaultRolePermissionTest extends CakeTestCase {
+class DefaultRolePermissionTest extends YACakeTestCase {
 
 /**
  * Fixtures
