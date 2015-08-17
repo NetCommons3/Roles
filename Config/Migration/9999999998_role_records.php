@@ -47,32 +47,20 @@ class RoleRecords extends NetCommonsMigration {
 				'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'システム管理者', 'is_systemized' => 1,
 			),
 			array(
-				'language_id' => 2,	'key' => 'user_administrator', 'type' => 1, 'name' => '会員管理者', 'is_systemized' => 1,
-			),
-			array(
-				'language_id' => 2, 'key' => 'chief_user', 'type' => 1, 'name' => '主任', 'is_systemized' => 1,
+				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => '管理者', 'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => '一般', 'is_systemized' => 1,
-			),
-			array(
-				'language_id' => 2, 'key' => 'guest_user', 'type' => 1, 'name' => 'ゲスト', 'is_systemized' => 1,
 			),
 			//--英語
 			array(
 				'language_id' => 1, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_systemized' => 1,
 			),
 			array(
-				'language_id' => 1,	'key' => 'user_administrator', 'type' => 1, 'name' => 'User administrator', 'is_systemized' => 1,
-			),
-			array(
-				'language_id' => 1, 'key' => 'chief_user', 'type' => 1, 'name' => 'Chief user', 'is_systemized' => 1,
+				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Administrator', 'is_systemized' => 1,
 			),
 			array(
 				'language_id' => 1, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_systemized' => 1,
-			),
-			array(
-				'language_id' => 1, 'key' => 'guest_user', 'type' => 1, 'name' => 'Guest', 'is_systemized' => 1,
 			),
 
 			//ルーム内の役割
