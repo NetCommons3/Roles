@@ -34,10 +34,10 @@ class Role extends RolesAppModel {
 
 /**
  * Role keys
+ * 後で、ROOM_ROLE_KEYに置き換える
  *
  * @var const
  */
-	//後で、ROOM_ROLE_KEYに置き換える
 	const
 		ROLE_KEY_SYSTEM_ADMINISTRATOR = 'system_administrator',
 		ROLE_KEY_EDITOR = 'editor',
