@@ -34,6 +34,7 @@ class Role extends RolesAppModel {
 
 /**
  * Role keys
+ * 後で、ROOM_ROLE_KEYに置き換える
  *
  * @var const
  */
@@ -41,6 +42,18 @@ class Role extends RolesAppModel {
 		ROLE_KEY_SYSTEM_ADMINISTRATOR = 'system_administrator',
 		ROLE_KEY_EDITOR = 'editor',
 		ROLE_KEY_VISITOR = 'visitor';
+
+/**
+ * Room Role keys
+ *
+ * @var const
+ */
+	const
+		ROOM_ROLE_KEY_ROOM_ADMINISTRATOR = 'room_administrator',
+		ROOM_ROLE_KEY_CHIEF_EDITOR = 'chief_editor',
+		ROOM_ROLE_KEY_EDITOR = 'editor',
+		ROOM_ROLE_KEY_GENERAL_USER = 'general_user',
+		ROOM_ROLE_KEY_VISITOR = 'visitor';
 
 /**
  * Validation rules
