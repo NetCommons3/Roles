@@ -33,8 +33,8 @@ class DefaultRolePermission extends RolesAppModel {
  */
 	public $validate = array(
 		'role_key' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -43,8 +43,8 @@ class DefaultRolePermission extends RolesAppModel {
 			),
 		),
 		'type' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -53,8 +53,8 @@ class DefaultRolePermission extends RolesAppModel {
 			),
 		),
 		'permission' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
