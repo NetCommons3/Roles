@@ -32,7 +32,7 @@ class RolesControllerTest extends YAControllerTestCase {
 
 /**
  * Roles data for testing
- * 後で削除⇒AuthGeneralTestSuiteに移動
+ * 後で削除⇒TestAuthGeneralに移動
  *
  * @var array
  */
@@ -100,7 +100,7 @@ class RolesControllerTest extends YAControllerTestCase {
 
 /**
  * Login as given roles
- * 後で削除⇒AuthGeneralTestSuiteに移動
+ * 後で削除⇒TestAuthGeneralに移動
  *
  * @param CakeTestCase $test CakeTestCase instance
  * @param string $role role key
