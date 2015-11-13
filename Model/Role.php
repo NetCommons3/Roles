@@ -117,7 +117,7 @@ class Role extends RolesAppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'Plugin' => array(
-			'className' => 'Plugin',
+			'className' => 'PluginManager.Plugin',
 			'joinTable' => 'plugins_roles',
 			'foreignKey' => 'role_id',
 			'associationForeignKey' => 'plugin_id',
