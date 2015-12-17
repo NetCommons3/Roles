@@ -47,7 +47,7 @@ class RoleRecords extends NetCommonsMigration {
 				'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'システム管理者', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => '管理者', 'is_system' => 1,
+				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => 'サイト管理者', 'is_system' => 1,
 			),
 			array(
 				'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => '一般', 'is_system' => 1,
@@ -57,7 +57,7 @@ class RoleRecords extends NetCommonsMigration {
 				'language_id' => 1, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Administrator', 'is_system' => 1,
+				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Site administrator', 'is_system' => 1,
 			),
 			array(
 				'language_id' => 1, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_system' => 1,
