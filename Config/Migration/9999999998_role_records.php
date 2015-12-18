@@ -44,57 +44,57 @@ class RoleRecords extends NetCommonsMigration {
 			//会員の権限
 			//--日本語
 			array(
-				'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'システム管理者', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'システム管理者', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => '管理者', 'is_systemized' => 1,
+				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => 'サイト管理者', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => '一般', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => '一般', 'is_system' => 1,
 			),
 			//--英語
 			array(
-				'language_id' => 1, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Administrator', 'is_systemized' => 1,
+				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Site administrator', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_system' => 1,
 			),
 
 			//ルーム内の役割
 			//--日本語
 			array(
-				'language_id' => 2, 'key' => 'room_administrator', 'type' => 2, 'name' => 'ルーム管理者', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'room_administrator', 'type' => 2, 'name' => 'ルーム管理者', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2, 'key' => 'chief_editor', 'type' => 2, 'name' => '編集長', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'chief_editor', 'type' => 2, 'name' => '編集長', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2, 'key' => 'editor', 'type' => 2, 'name' => '編集者', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'editor', 'type' => 2, 'name' => '編集者', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2, 'key' => 'general_user', 'type' => 2, 'name' => '一般', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'general_user', 'type' => 2, 'name' => '一般', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 2, 'key' => 'visitor', 'type' => 2, 'name' => '参観者', 'is_systemized' => 1,
+				'language_id' => 2, 'key' => 'visitor', 'type' => 2, 'name' => '参観者', 'is_system' => 1,
 			),
 			//--英語
 			array(
-				'language_id' => 1, 'key' => 'room_administrator', 'type' => 2, 'name' => 'Room Manager', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'room_administrator', 'type' => 2, 'name' => 'Room Manager', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1, 'key' => 'chief_editor', 'type' => 2, 'name' => 'Chief editor', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'chief_editor', 'type' => 2, 'name' => 'Chief editor', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1, 'key' => 'editor', 'type' => 2, 'name' => 'Editor', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'editor', 'type' => 2, 'name' => 'Editor', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1, 'key' => 'general_user', 'type' => 2, 'name' => 'General user', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'general_user', 'type' => 2, 'name' => 'General user', 'is_system' => 1,
 			),
 			array(
-				'language_id' => 1, 'key' => 'visitor', 'type' => 2, 'name' => 'Visitor', 'is_systemized' => 1,
+				'language_id' => 1, 'key' => 'visitor', 'type' => 2, 'name' => 'Visitor', 'is_system' => 1,
 			)
 		),
 	);
