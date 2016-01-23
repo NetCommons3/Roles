@@ -307,7 +307,7 @@ e.g.) create_page, edit_other_content, post_top_article', 'charset' => 'utf8'),
 			'role_key' => 'general_user',
 			'type' => 'room_role',
 			'permission' => 'content_comment_creatable',
-			'value' => 0,
+			'value' => 1,
 			'fixed' => 0,
 		),
 		array(
