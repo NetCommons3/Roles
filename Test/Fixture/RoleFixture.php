@@ -37,9 +37,9 @@ e.g.) Administrator, User Manager, Chief, User
 		'modified_user' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1)
+			'PRIMARY' => array('column' => 'id', 'unique' => 1),
 		),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB'),
 	);
 
 /**
@@ -48,77 +48,31 @@ e.g.) Administrator, User Manager, Chief, User
  * @var array
  */
 	public $records = array(
+		//会員の権限
 		array(
-			'id' => 1,
-			'language_id' => 2,
-			'key' => 'system_administrator',
-			'type' => 1,
-			'name' => 'system_administrator name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_system' => 1,
 		),
 		array(
-			'id' => 2,
-			'language_id' => 2,
-			'key' => 'room_administrator',
-			'type' => 2,
-			'name' => 'room_administrator name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => 'Site administrator', 'is_system' => 1,
 		),
 		array(
-			'id' => 3,
-			'language_id' => 2,
-			'key' => 'chief_editor',
-			'type' => 2,
-			'name' => 'chief_editor name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_system' => 1,
+		),
+		//ルーム内の役割
+		array(
+			'language_id' => 2, 'key' => 'room_administrator', 'type' => 2, 'name' => 'Room Manager', 'is_system' => 1,
 		),
 		array(
-			'id' => 4,
-			'language_id' => 2,
-			'key' => 'editor',
-			'type' => 2,
-			'name' => 'editor name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2, 'key' => 'chief_editor', 'type' => 2, 'name' => 'Chief editor', 'is_system' => 1,
 		),
 		array(
-			'id' => 5,
-			'language_id' => 2,
-			'key' => 'general_user',
-			'type' => 2,
-			'name' => 'general_user name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2, 'key' => 'editor', 'type' => 2, 'name' => 'Editor', 'is_system' => 1,
 		),
 		array(
-			'id' => 6,
-			'language_id' => 2,
-			'key' => 'visitor',
-			'type' => 2,
-			'name' => 'visitor name',
-			'is_system' => '1',
-			'created_user' => 1,
-			'created' => false,
-			'modified_user' => 1,
-			'modified' => false,
+			'language_id' => 2, 'key' => 'general_user', 'type' => 2, 'name' => 'General user', 'is_system' => 1,
+		),
+		array(
+			'language_id' => 2, 'key' => 'visitor', 'type' => 2, 'name' => 'Visitor', 'is_system' => 1,
 		)
 	);
 
