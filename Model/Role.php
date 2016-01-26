@@ -25,136 +25,89 @@ App::uses('RolesAppModel', 'Roles.Model');
 class Role extends RolesAppModel {
 
 /**
- * Role types
+ * ロールタイプ(会員)
  */
-	const
-		ROLE_TYPE_USER = '1',
-		ROLE_TYPE_ROOM = '2',
-		ROLE_TYPE_GROUP = '3';
+	const ROLE_TYPE_USER = '1';
 
 /**
- * Role keys
- * 後で、ROOM_ROLE_KEYに置き換える
+ * ロールタイプ(ルーム)
+ */
+	const ROLE_TYPE_ROOM = '2';
+
+/**
+ * ルームロールのキー(ルーム管理者)
  *
  * @var const
  */
-	const
-		ROLE_KEY_SYSTEM_ADMINISTRATOR = 'system_administrator',
-		ROLE_KEY_EDITOR = 'editor',
-		ROLE_KEY_VISITOR = 'visitor';
+	const ROOM_ROLE_KEY_ROOM_ADMINISTRATOR = 'room_administrator';
 
 /**
- * Room Role keys
+ * ルームロールのキー(編集長)
  *
  * @var const
  */
-	const
-		ROOM_ROLE_KEY_ROOM_ADMINISTRATOR = 'room_administrator',
-		ROOM_ROLE_KEY_CHIEF_EDITOR = 'chief_editor',
-		ROOM_ROLE_KEY_EDITOR = 'editor',
-		ROOM_ROLE_KEY_GENERAL_USER = 'general_user',
-		ROOM_ROLE_KEY_VISITOR = 'visitor';
+	const ROOM_ROLE_KEY_CHIEF_EDITOR = 'chief_editor';
+
+/**
+ * ルームロールのキー(編集者)
+ *
+ * @var const
+ */
+	const ROOM_ROLE_KEY_EDITOR = 'editor';
+
+/**
+ * ルームロールのキー(一般)
+ *
+ * @var const
+ */
+	const ROOM_ROLE_KEY_GENERAL_USER = 'general_user';
+
+/**
+ * ルームロールのキー(参観者)
+ *
+ * @var const
+ */
+	const ROOM_ROLE_KEY_VISITOR = 'visitor';
 
 /**
  * Validation rules
  *
  * @var array
  */
-	public $validate = array(
-		'language_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'type' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'name' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
+	public $validate = array();
 
 /**
- * belongsTo associations
+ * Called during validation operations, before validation. Please note that custom
+ * validation rules can be defined in $validate.
  *
- * @var array
+ * @param array $options Options passed from Model::save().
+ * @return bool True if validate operation should continue, false to abort
+ * @link http://book.cakephp.org/2.0/en/models/callback-methods.html#beforevalidate
+ * @see Model::save()
  */
-	public $belongsTo = array(
-		'Language' => array(
-			'className' => 'M17n.Language',
-			'foreignKey' => 'language_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public function beforeValidate($options = array()) {
+		$this->validate = Hash::merge($this->validate, array(
+			'language_id' => array(
+				'numeric' => array(
+					'rule' => array('numeric'),
+					'message' => __d('net_commons', 'Invalid request.'),
+				),
+			),
+			'type' => array(
+				'numeric' => array(
+					'rule' => array('numeric'),
+					'message' => __d('net_commons', 'Invalid request.'),
+				),
+			),
+			'name' => array(
+				'notBlank' => array(
+					'rule' => array('notBlank'),
+					'message' => __d('net_commons', 'Invalid request.'),
+				),
+			),
+		));
 
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'Plugin' => array(
-			'className' => 'PluginManager.Plugin',
-			'joinTable' => 'plugins_roles',
-			'foreignKey' => 'role_id',
-			'associationForeignKey' => 'plugin_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		),
-		'Room' => array(
-			'className' => 'Rooms.Room',
-			'joinTable' => 'roles_rooms',
-			'foreignKey' => 'role_id',
-			'associationForeignKey' => 'room_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		),
-		//'UserAttribute' => array(
-		//	'className' => 'UserAttribute',
-		//	'joinTable' => 'roles_user_attributes',
-		//	'foreignKey' => 'role_id',
-		//	'associationForeignKey' => 'user_attribute_id',
-		//	'unique' => 'keepExisting',
-		//	'conditions' => '',
-		//	'fields' => '',
-		//	'order' => '',
-		//	'limit' => '',
-		//	'offset' => '',
-		//	'finderQuery' => '',
-		//)
-	);
+		return parent::beforeValidate($options);
+	}
 
 }
