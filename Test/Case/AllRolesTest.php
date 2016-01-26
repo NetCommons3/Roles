@@ -9,6 +9,8 @@
  * @copyright Copyright 2014, NetCommons Project
  */
 
+App::uses('NetCommonsTestSuite', 'NetCommons.TestSuite');
+
 /**
  * Roles All Test Case
  *
@@ -16,17 +18,17 @@
  * @package NetCommons\Roles\Test\Case
  * @codeCoverageIgnore
  */
-class AllRolesTest extends CakeTestSuite {
+class AllRolesTest extends NetCommonsTestSuite {
 
 /**
  * All test suite
  *
- * @return CakeTestSuite
+ * @return NetCommonsTestSuite
  */
 	public static function suite() {
 		$plugin = preg_replace('/^All([\w]+)Test$/', '$1', __CLASS__);
-		$suite = new CakeTestSuite(sprintf('All %s Plugin tests', $plugin));
-		$suite->addTestDirectoryRecursive(CakePlugin::path($plugin) . 'Test' . DS . 'Case');
+		$suite = new NetCommonsTestSuite(sprintf('All %s Plugin tests', $plugin));
+		//$suite->addTestDirectoryRecursive(CakePlugin::path($plugin) . 'Test' . DS . 'Case');
 		return $suite;
 	}
 }
