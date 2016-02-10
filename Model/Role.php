@@ -86,7 +86,7 @@ class Role extends RolesAppModel {
  * @see Model::save()
  */
 	public function beforeValidate($options = array()) {
-		$this->validate = Hash::merge($this->validate, array(
+		$this->validate = Hash::merge(array(
 			'language_id' => array(
 				'numeric' => array(
 					'rule' => array('numeric'),
@@ -105,7 +105,7 @@ class Role extends RolesAppModel {
 					'message' => __d('net_commons', 'Invalid request.'),
 				),
 			),
-		));
+		), $this->validate);
 
 		return parent::beforeValidate($options);
 	}
