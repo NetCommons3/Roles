@@ -67,6 +67,7 @@ class RoleValidateTest extends NetCommonsValidateTest {
 		return array(
 			array($data, 'language_id', 'a', __d('net_commons', 'Invalid request.')),
 			array($data, 'type', 'b', __d('net_commons', 'Invalid request.')),
+			array($data, 'type', '3', __d('net_commons', 'Invalid request.')),
 			array($data, 'name', '', __d('net_commons', 'Invalid request.')),
 		);
 	}
