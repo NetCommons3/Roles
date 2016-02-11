@@ -107,6 +107,12 @@ class Role extends RolesAppModel {
 			),
 		), $this->validate);
 
+		if (! isset($this->validate['type']['inList'])) {
+			$this->validate['type']['inList'] = array(
+				'rule' => array('inList', array(self::ROLE_TYPE_USER, self::ROLE_TYPE_ROOM)),
+				'message' => __d('net_commons', 'Invalid request.'),
+			);
+		}
 		return parent::beforeValidate($options);
 	}
 
