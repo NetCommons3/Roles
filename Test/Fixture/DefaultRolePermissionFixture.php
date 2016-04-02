@@ -402,6 +402,13 @@ e.g.) create_page, edit_other_content, post_top_article', 'charset' => 'utf8'),
 			'value' => 0,
 			'fixed' => 1,
 		),
+
+		//メール設定編集権限
+		array('role_key' => 'room_administrator', 'type' => 'room_role', 'permission' => 'mail_editable', 'value' => '1', 'fixed' => '1', ),
+		array('role_key' => 'chief_editor', 'type' => 'room_role', 'permission' => 'mail_editable', 'value' => '1', 'fixed' => '1', ),
+		array('role_key' => 'editor', 'type' => 'room_role', 'permission' => 'mail_editable', 'value' => '0', 'fixed' => '1', ),
+		array('role_key' => 'general_user', 'type' => 'room_role', 'permission' => 'mail_editable', 'value' => '0', 'fixed' => '1', ),
+		array('role_key' => 'visitor', 'type' => 'room_role', 'permission' => 'mail_editable', 'value' => '0', 'fixed' => '1', ),
 	);
 
 }
