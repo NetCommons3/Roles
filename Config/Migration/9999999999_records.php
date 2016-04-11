@@ -45,22 +45,28 @@ class Records extends NetCommonsMigration {
 			//--日本語
 			array(
 				'language_id' => 2, 'key' => 'system_administrator', 'type' => 1, 'name' => 'システム管理者', 'is_system' => 1,
+				'description' => 'システムの管理者。サイト構築に必要なシステム設定を行うことができます。',
 			),
 			array(
 				'language_id' => 2,	'key' => 'administrator', 'type' => 1, 'name' => 'サイト管理者', 'is_system' => 1,
+				'description' => 'サイトの最高責任者。すべての会員情報を閲覧でき、必要に応じて制限を加えることができます。ルームの新設／名称変更等の権限を持ち、ルームごとに運営メンバー（ルーム管理者や編集長、編集者）を指定することができます。',
 			),
 			array(
 				'language_id' => 2, 'key' => 'common_user', 'type' => 1, 'name' => '一般', 'is_system' => 1,
+				'description' => '一般会員。他人に対して、必要最低限の情報のみ閲覧できます。',
 			),
 			//--英語
 			array(
 				'language_id' => 1, 'key' => 'system_administrator', 'type' => 1, 'name' => 'System administrator', 'is_system' => 1,
+				'description' => 'Super user of the system.',
 			),
 			array(
 				'language_id' => 1,	'key' => 'administrator', 'type' => 1, 'name' => 'Site administrator', 'is_system' => 1,
+				'description' => 'Super user of the site. The one with this authority can browse and edit all the acquired data of the users, and is assigned as a head of all the grouprooms built in the NetCommons. He/She is also a site manager of the NetCommons.',
 			),
 			array(
 				'language_id' => 1, 'key' => 'common_user', 'type' => 1, 'name' => 'Common user', 'is_system' => 1,
+				'description' => 'A common user',
 			),
 
 			//ルーム内の役割
