@@ -14,8 +14,8 @@
 	"license": "NetCommons License",
 	"authors": [
 		{
-			"name": "NetCommons Community",
-			"homepage": "https://github.com/NetCommons3/Roles/graphs/contributors"
+            "name": "NetCommons Community",
+            "homepage": "http://www.netcommons.org"
 		}
 	],
 	"type":        "cakephp-plugin",
