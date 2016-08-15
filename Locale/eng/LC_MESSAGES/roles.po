@@ -1,0 +1,39 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#
+# ルーム作成時のページ名
+#
+
+msgid "RoomRoleDesc.room_administrator"
+msgstr "Chief executive of the room. To take advantage of the plug-in, free to design a room, you can run."
+"It has all of the rights associated with the content."
+
+msgid "RoomRoleDesc.chief_editor"
+msgstr "Room administrator of collaborators. To take advantage of the plug-in, you can design a free room."
+"In addition, if the approval function is enabled, according to the public authority of the content, you can publish the content."
+
+msgid "RoomRoleDesc.editor"
+msgstr "Collaborators of the editor-in-chief. It is possible to post content, you can also be modified content that were posted by other people at the same time."
+"However, if the approval function is enabled, you will not be able to publish the content. <br>"
+"* In Room management plug-in, you can grant a public authority."
+
+msgid "RoomRoleDesc.general_user"
+msgstr "General member. Depending on the posting privileges of content, you can post content."
+"However, although it is possible to edit only the content that they have posted, "
+"if the approval function is enabled, you will not be able to publish the content."
+
+msgid "RoomRoleDesc.visitor"
+msgstr "Guest Member. It will be able to view the content, but you can not write."

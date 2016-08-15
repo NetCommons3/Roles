@@ -1,0 +1,39 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#
+# ルーム作成時のページ名
+#
+
+msgid "RoomRoleDesc.room_administrator"
+msgstr "ルームの最高責任者。プラグインを活用して、自由にルームをデザインし、運営することができます。"
+"コンテンツに関する全ての権限を有します。"
+
+msgid "RoomRoleDesc.chief_editor"
+msgstr "ルーム管理者の協力者。プラグインを活用して、自由にルームをデザインすることができます。"
+"また、承認機能が有効になっている場合、コンテンツの公開権限に応じて、コンテンツを公開することができます。"
+
+msgid "RoomRoleDesc.editor"
+msgstr "編集長の協力者。コンテンツを投稿することができ、同時に他人の投稿したコンテンツも修正することができます。"
+"但し、承認機能が有効になっている場合には、コンテンツを公開することはできません。<br>"
+"※ルーム管理プラグインで、公開権限を付与することもできます。"
+
+msgid "RoomRoleDesc.general_user"
+msgstr "一般会員。コンテンツの投稿権限に応じて、コンテンツを投稿することができます。"
+"但し、自分が投稿したコンテンツのみ編集することができるが、承認機能が有効になっている場合、"
+"コンテンツを公開することはできません。"
+
+msgid "RoomRoleDesc.visitor"
+msgstr "ゲスト会員。コンテンツを閲覧することはできますが、書き込むことはできません。"
