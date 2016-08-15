@@ -27,8 +27,8 @@ msgstr "Room administrator of collaborators. To take advantage of the plug-in, y
 
 msgid "RoomRoleDesc.editor"
 msgstr "Collaborators of the editor-in-chief. It is possible to post content, you can also be modified content that were posted by other people at the same time."
-"However, if the approval function is enabled, you will not be able to publish the content. <br>"
-"* In Room management plug-in, you can grant a public authority."
+"However, if the approval function is enabled, you will not be able to publish the content."
+" * In Room management plug-in, you can grant a public authority."
 
 msgid "RoomRoleDesc.general_user"
 msgstr "General member. Depending on the posting privileges of content, you can post content."
