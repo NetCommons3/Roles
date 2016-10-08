@@ -25,7 +25,7 @@ class DefaultRolePermissionGetDefaultRolePermissionsTest extends NetCommonsGetTe
  * @var array
  */
 	public $fixtures = array(
-		'plugin.roles.default_role_permission',
+		'plugin.roles.default_role_permission4test',
 		'plugin.roles.role',
 	);
 
