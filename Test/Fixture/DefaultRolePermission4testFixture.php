@@ -40,9 +40,6 @@ class DefaultRolePermission4testFixture extends DefaultRolePermissionFixture {
  */
 	public function init() {
 		parent::init();
-
-		require_once App::pluginPath('Roles') . 'Config' . DS . 'Migration' . DS . '1469603399_records.php';
-		$this->records = (new RolesRecords())->records[$this->name];
 	}
 
 }
