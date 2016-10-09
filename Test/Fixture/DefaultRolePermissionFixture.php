@@ -395,6 +395,9 @@ class DefaultRolePermissionFixture extends CakeTestFixture {
 		require_once App::pluginPath('Roles') . 'Config' . DS . 'Schema' . DS . 'schema.php';
 		$this->fields = (new RolesSchema())->tables[Inflector::tableize($this->name)];
 
+		require_once App::pluginPath('Roles') . 'Config' . DS . 'Migration' . DS . '1469603399_records.php';
+		$this->records = (new RolesRecords())->records[$this->name];
+
 		parent::init();
 	}
 
