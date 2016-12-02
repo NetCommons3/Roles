@@ -17,23 +17,33 @@ msgstr ""
 # ルーム作成時のページ名
 #
 
+#: Rooms/View/Helper/RoomsHelper.php:279
+#: Rooms/View/Helper/RoomsRolesFormHelper.php:187
 msgid "RoomRoleDesc.room_administrator"
 msgstr "ルームの最高責任者。プラグインを活用して、自由にルームをデザインし、運営することができます。"
 "コンテンツに関する全ての権限を有します。"
 
+#: Rooms/View/Helper/RoomsHelper.php:279
+#: Rooms/View/Helper/RoomsRolesFormHelper.php:187
 msgid "RoomRoleDesc.chief_editor"
 msgstr "ルーム管理者の協力者。プラグインを活用して、自由にルームをデザインすることができます。"
 "また、承認機能が有効になっている場合、コンテンツの公開権限に応じて、コンテンツを公開することができます。"
 
+#: Rooms/View/Helper/RoomsHelper.php:279
+#: Rooms/View/Helper/RoomsRolesFormHelper.php:187
 msgid "RoomRoleDesc.editor"
 msgstr "編集長の協力者。コンテンツを投稿することができ、同時に他人の投稿したコンテンツも修正することができます。"
 "但し、承認機能が有効になっている場合には、コンテンツを公開することはできません。"
 "※ルーム管理プラグインで、公開権限を付与することもできます。"
 
+#: Rooms/View/Helper/RoomsHelper.php:279
+#: Rooms/View/Helper/RoomsRolesFormHelper.php:187
 msgid "RoomRoleDesc.general_user"
 msgstr "一般会員。コンテンツの投稿権限に応じて、コンテンツを投稿することができます。"
 "但し、自分が投稿したコンテンツのみ編集することができるが、承認機能が有効になっている場合、"
 "コンテンツを公開することはできません。"
 
+#: Rooms/View/Helper/RoomsHelper.php:279
+#: Rooms/View/Helper/RoomsRolesFormHelper.php:187
 msgid "RoomRoleDesc.visitor"
 msgstr "ゲスト会員。コンテンツを閲覧することはできますが、書き込むことはできません。"
