@@ -1,26 +1,33 @@
 {
-	"name": "netcommons/roles",
-	"description": "Roles Plugin for NetCommons3",
-	"homepage": "http://www.netcommons.org/",
-	"extra": {
-		"installer-paths": {
-			"app/Plugin/{$name}": ["type:cakephp-plugin"]
-		}
-	},
-	"require": {
-		"cakedc/migrations":            "~2.2",
-		"netcommons/net-commons":       "@dev"
-	},
-	"license": "NetCommons License",
-	"authors": [
-		{
+    "name": "netcommons/roles",
+    "description": "Roles Plugin for NetCommons3",
+    "homepage": "http://www.netcommons.org/",
+    "extra": {
+        "installer-paths": {
+            "app/Plugin/{$name}": [
+                "type:cakephp-plugin"
+            ]
+        }
+    },
+    "require": {
+        "cakedc/migrations": "~2.2",
+        "netcommons/net-commons": "@dev"
+    },
+    "license": "LicenseRef-NetCommons",
+    "license-ref-net-commons": "https://raw.githubusercontent.com/NetCommons3/NetCommons3/master/license.txt",
+    "authors": [
+        {
             "name": "NetCommons Community",
             "homepage": "http://www.netcommons.org"
-		}
-	],
-	"type":        "cakephp-plugin",
-	"keywords":    ["roles","netcommons","cakephp2"],
-	"config": {
-		"vendor-dir": "vendors"
-	}
+        }
+    ],
+    "type": "cakephp-plugin",
+    "keywords": [
+        "roles",
+        "netcommons",
+        "cakephp2"
+    ],
+    "config": {
+        "vendor-dir": "vendors"
+    }
 }
